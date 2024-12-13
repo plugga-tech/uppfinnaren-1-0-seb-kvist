@@ -92,8 +92,6 @@ appsettings.*.local.json
 
 publish/
 
-wwwroot/
-
 dist/
 
 
