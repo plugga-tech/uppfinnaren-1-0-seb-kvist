@@ -1,0 +1,34 @@
+﻿@model uppfinnaren_1_0_seb_kvist.Models.Alster
+
+@{
+    ViewData["Title"] = Model != null ? "Detaljer för " + Model.Namn : "Alster ej hittat";
+}
+
+<div class="detaljWrapper">
+@if (Model != null)
+{
+    <div class="detaljerContainer">
+        <h1>@Model.Namn</h1>
+        <p>@Model.Beskrivning</p>
+        
+        @if (!string.IsNullOrEmpty(Model.BildUrl))
+    {
+        <img src="@Model.BildUrl" alt="@Model.Namn" class="detaljerImage"/>
+    }
+    else
+    {
+        <p><em>Ingen bild tillgänglig</em></p>
+    }
+    <a href="@Url.Action("Index", "Alster")" class="backBtn">Tillbaka till listan</a>
+    </div>
+    
+}
+else
+{
+    <div class="detaljerContainer">
+        <h1>Fel</h1>
+        <p>Alstret du försökte visa kunde inte hittas.</p>
+        <a href="@Url.Action("Index", "Alster")" class="backBtn">Tillbaka till listan</a>
+    </div>
+}
+</div>

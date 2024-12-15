@@ -1,0 +1,16 @@
+@model uppfinnaren_1_0_seb_kvist.Models.AboutMeModel
+
+@{
+    ViewData["Title"] = "Om oss";
+}
+
+<div class="aboutUsContainer">
+    <h1 class="aboutUsTitle">Om oss</h1>
+    <div class="aboutUsContent">
+        <h3><strong>Kontaktuppgifter:</strong></h3>
+        <p><strong>Namn:</strong> @(string.IsNullOrEmpty(Model.Namn) ? "Ej tillgänglig" : Model.Namn)</p>
+        <p><strong>E-post:</strong> @(string.IsNullOrEmpty(Model.Email) ? "Ej tillgänglig" : Model.Email)</p>
+        <p><strong>Telefonnummer:</strong> @(string.IsNullOrEmpty(Model.Telefonnummer) ? "Ej tillgänglig" : Model.Telefonnummer)</p>
+        <img src="/bilder/toshiiverket.jpg" alt="Bild på konstnären Toshi" class="artistImage"/>
+    </div>
+</div>
