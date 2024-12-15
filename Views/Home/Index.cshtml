@@ -1,8 +1,38 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Startsidan";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero -->
+<div class="hero-section">
+    <h1>Välkommen till TOSHI I VERKET</h1>
+    <p class="p-hero-section">Trädesign för den lokala befolkningen</p>
+</div>
+
+<!-- Intro -->
+<div class="intro-section">
+    <h2>Vår resa och vision</h2>
+    <p>
+        Toshi och teamet på TOSHI I VERKET är glada att äntligen lansera vår första hemsida, där vi stolt kan presentera våra egendesignade alster. 
+        <br>
+        I framtiden kommer hemsidan även att erbjuda möjligheten att köpa alster för hemleverans, men fram tills dess är ni varmt välkomna att besöka oss på plats i Oskarshamn.
+        <br><br>
+        Vår vision är att kombinera konstnärlig frihet med funktionalitet och skapa alster som inte bara är vackra att titta på utan även användbara i ditt hem.
+    </p>
+</div>
+
+<!-- Knappar och vit kub/design -->
+<div class="shortcutBtnContainer">
+    <a href="@Url.Action("Index", "Alster")" class="shortcutBtn">Utforska våra alster</a>
+    <a href="@Url.Action("Index", "AboutMe")" class="shortcutBtn">Om oss</a>
+</div>
+
+<!-- Insta/facebook logos -->
+<div class="socialsLogoContainer">
+    <h2>Följ oss på sociala medier</h2>
+    <a href="https://www.instagram.com/" target="_blank">
+        <img src="/bilder/Instagram_icon.png" alt="Instagram" class="socialsLogoImg">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+        <img src="/bilder/Facebook_icon.png" alt="Facebook" class="socialsLogoImg">
+    </a>
 </div>

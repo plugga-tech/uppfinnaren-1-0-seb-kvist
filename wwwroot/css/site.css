@@ -1,0 +1,239 @@
+/* GRUNDLAYOUT-STYLING*/
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #073b37;
+    color: #f8f9fa;
+  }
+  
+header {
+  background-color: #f8f9fa;
+    padding: 13px 20px;
+ }
+  
+nav {
+  Display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+.navbar-brand {
+  text-decoration: none;
+  color: #073b37;
+  display: flex;
+  flex-direction: column;
+  }
+
+.VarumarkeTitel {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.VarumarkeSlogan {
+  font-size: 0.8em; 
+  color: #073b37;
+}
+  
+
+ul.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 28px;
+  }
+  
+ul.navbar-links a {
+  text-decoration: none;
+  color:#073b37;
+  padding: 10px 15px;
+  display: inline-block;
+}
+  
+ul.navbar-links a:hover {
+  background-color: #073b37;
+  color: white;
+  height: 100%;
+  }
+  
+footer {
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+  padding: 30px 0;
+  border-top: 1px solid #ddd;
+  }
+
+
+  
+/* VÅRA ALSTER-SIDAN */
+.alsterContainer{
+  padding: 20px;
+}
+.alsterGalleri {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  padding: 20px;
+  margin: 0 auto;;
+  max-width: 1800px; 
+  justify-items: center;
+  margin-top: 50px;
+}
+.alsterCard {
+  background-color: #156a4b;
+  border-radius: 4px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.alsterCard:hover {
+  transform: scale(1.03);
+}
+.alsterImage {
+  width: 100%;  
+  border-radius: 4px;
+}
+.alsterCardContent {
+  flex-grow: 1; 
+}
+.alsterNamn {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.alsterBeskrivning {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.alsterBtn {
+  display: inline-block;
+  padding: 8px 180px;
+  background-color: #10968b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.alsterBtn:hover {
+  background-color: #13bfb0;
+}
+
+/* DETALJER SIDAN */
+
+.detaljWrapper{
+  display: flex;
+  justify-content: center;
+  padding: 20px; 
+}
+.detaljerContainer {
+  max-width: 800px; /* Maximal bredd */
+  text-align: center; /* Centrera text */
+}
+
+/* Styling for the back button */
+.backBtn {
+  display: inline-block;
+  padding: 10px 100px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #10968b;;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+.backBtn:hover {
+  background-color: #13bfb0; /* Darker shade on hover */
+}
+
+.detaljerImage {
+  border-radius: 24px;
+  box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.8);
+}
+
+/* HEMSIDAN */
+.hero-section {
+  text-align:center;
+  height:200px;
+  color: white;
+  padding-top: 70px;
+}
+.p-hero-section {
+  font-size:1.1em;
+  font-style: italic;
+}
+.intro-section {
+  text-align: center;
+}
+.shortcutBtnContainer {
+  text-align: center;
+  margin-top: 80px;
+  background-color:#f9f9f9;
+  padding:60px 15px;
+  width: 100%;
+}
+.shortcutBtn {
+  background-color:#d85d2c;
+  color:white;
+  padding:15px 30px;
+  text-decoration:none;
+  border-radius:10px;
+  margin:10px;
+}
+.shortcutBtn:hover {
+  background-color: #ff8250; /* Darker shade on hover */
+}
+.socialsLogoContainer {
+  text-align: center; 
+  margin-top: 40px;
+}
+.socialsLogoImg {
+  width: 40px; 
+  margin: 10px; 
+  transition: transform 0.3s ease;
+}
+.socialsLogoImg:hover {
+  transform: scale(1.3);
+}
+
+
+
+/* OM OSS */
+.aboutUsContainer {
+  padding: 10px 20px;
+  color: #073b37;
+  margin-bottom: 80px;
+}
+.aboutUsTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+.aboutUsContent {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.8);
+}
+.artistImage {
+  max-height: 220px;
+  border-radius: 5px;
+  box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.8);
+}
+
+/* PRIVACY */
+.privacyContainer {
+  padding: 20px
+}

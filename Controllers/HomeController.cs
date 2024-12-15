@@ -1,31 +1,18 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using uppfinnaren_1_0_seb_kvist.Models;
 
-namespace uppfinnaren_1_0_seb_kvist.Controllers;
-
-public class HomeController : Controller
+namespace uppfinnaren_1_0_seb_kvist.Controllers
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    public class HomeController : Controller
     {
-        _logger = logger;
-    }
+        public IActionResult Index() //// Skickar användaren till en startsida
+        {
+            return View();  
+        }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        public IActionResult Privacy()
+        {
+            return View();  // Privacy-vyn - visa information om sekretess och användarvillkor.
+        }
     }
 }

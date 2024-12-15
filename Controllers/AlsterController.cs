@@ -1,33 +1,35 @@
 using System;
 using Microsoft.AspNetCore.Mvc;
-using uppfinnaren_1_0_seb_kvist.Models; //Importerar in models
+using uppfinnaren_1_0_seb_kvist.Models; 
 
 namespace uppfinnaren_1_0_seb_kvist.Controllers
 {
     public class AlsterController : Controller
     {
-        private readonly IAlsterRepository _alsterRepository; //Sätter en variabel som lagrar vårt repository
+        private readonly IAlsterRepository _alsterRepository; 
 
-        public AlsterController(IAlsterRepository alsterRepository)  //Konstruktor. Skapar en instans av controller och ger den vårt repository
+
+        //DI - hämtar in alster från repository
+        public AlsterController(IAlsterRepository alsterRepository) 
         {
             _alsterRepository = alsterRepository;
         }
 
-        public IActionResult Index() //Så man kan se alla alster
+        public IActionResult Index() //Visar alla alster
         {
-            var allaAlster = _alsterRepository.AllaAlster; //HÄmtar in alla olika alster
-            return View(allaAlster); //Skickar till View delen för visning senare
+            var alster = _alsterRepository.AllaAlster();
+            return View("AllaAlster", alster);
         }
-        public IActionResult Detaljer(int id) //Specifika utpekning av alster ID
-            {
-            var alster = _alsterRepository.HämtaAlsterMedId(id);
 
+        // Detaljer visar info beroende alster ID
+        public IActionResult Detaljer(int id)
+        {
+            var alster = _alsterRepository.HittaAlsterMedId(id); 
             if (alster == null)
             {
-                return NotFound();
+                return NotFound(); 
             }
-
-            return View(alster);
+            return View(alster); 
         }
     }
 }
