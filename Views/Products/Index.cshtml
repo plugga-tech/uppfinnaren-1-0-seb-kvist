@@ -1,0 +1,29 @@
+@model IEnumerable<dynamic>
+
+@{
+    ViewData["Title"] = "Våra Alster";
+}
+
+<div class="categoryContainer">
+    <h1 class="categoryTitle">Våra alster</h1>
+
+    <div class="categoryDescription">
+        <p>Välj en kategori för att se våra alster inom det området.</p>
+    </div>
+    
+    <div class="categoryGrid">
+        @foreach (var category in Model)
+        {
+        <div class="categoryCard">
+            <a href="@Url.Action("ByCategory", "Products", new { category = category.Category })">
+                <div class="categoryName">
+                    @category.Category
+                </div>
+                <div class="categoryImage">
+                    <img src="@category.Image" alt="@category.Category"/>
+                </div>
+            </a>
+        </div>
+        }
+    </div>
+</div>

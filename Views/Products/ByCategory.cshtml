@@ -1,0 +1,24 @@
+@model IEnumerable<uppfinnaren_1_0_seb_kvist.Models.Product>
+
+@{
+    ViewData["Title"] = "Produkter i " + ViewData["CategoryName"];
+}
+
+<div class="productContainer">
+    <h1>Produkter i @ViewData["CategoryName"]</h1>
+    <div class="productGrid">
+        @foreach (var product in Model)
+        {
+            <div class="productCard">
+                <img src="@product.ImagePath" alt="@product.ProductName" class="productImage">
+                <h3 class="productName">@product.ProductName</h3>
+                <a href="@Url.Action("Details", "Products", new { id = product.ProductId })" class="productBtn">Mer info</a>
+            </div>
+        }
+    </div>
+
+    <div>
+        <a href="@Url.Action("Index", "Products")" class="backBtn">Tillbaka till kategorier</a>
+    </div>
+</div>
+

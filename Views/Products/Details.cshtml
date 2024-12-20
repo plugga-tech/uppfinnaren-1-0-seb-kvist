@@ -1,0 +1,32 @@
+﻿@model uppfinnaren_1_0_seb_kvist.Models.Product
+
+@{
+    ViewData["Title"] = Model != null ? "Detaljer för " + Model.ProductName : "Produkt ej hittad";
+}
+
+<div class="detaljWrapper">
+    @if (Model != null)
+    {
+        <div class="detaljerContainer">
+            <h1>@Model.ProductName</h1>
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <img src="@Model.ImagePath" alt="@Model.ProductName" class="detaljerImage"/>
+            }
+            else
+            {
+                <p><em>Ingen bild tillgänglig</em></p>
+            }
+
+            <a href="@Url.Action("ByCategory", "Products", new { category = Model.ProductCategory })" class="backBtn">Tillbaka till kategorin</a>
+        </div>
+    }
+    else
+    {
+        <div class="detaljerContainer">
+            <h1>Fel</h1>
+            <p>Produkten du försökte visa kunde inte hittas.</p>
+            <a href="@Url.Action("Index", "Products")" class="backBtn">Tillbaka till alla produkter</a>
+        </div>
+    }
+</div>

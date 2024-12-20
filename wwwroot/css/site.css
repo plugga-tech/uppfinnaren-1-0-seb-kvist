@@ -64,102 +64,7 @@ footer {
   padding: 30px 0;
   border-top: 1px solid #ddd;
   }
-
-
   
-/* VÅRA ALSTER-SIDAN */
-.alsterContainer{
-  padding: 20px;
-}
-.alsterGalleri {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 70px;
-  padding: 20px;
-  margin: 0 auto;;
-  max-width: 1800px; 
-  justify-items: center;
-  margin-top: 50px;
-}
-.alsterCard {
-  background-color: #156a4b;
-  border-radius: 4px;
-  box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease;
-  padding: 17px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.alsterCard:hover {
-  transform: scale(1.03);
-}
-.alsterImage {
-  width: 100%;  
-  border-radius: 4px;
-}
-.alsterCardContent {
-  flex-grow: 1; 
-}
-.alsterNamn {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-.alsterBeskrivning {
-  color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-.alsterBtn {
-  display: inline-block;
-  padding: 8px 180px;
-  background-color: #10968b;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.alsterBtn:hover {
-  background-color: #13bfb0;
-}
-
-/* DETALJER SIDAN */
-
-.detaljWrapper{
-  display: flex;
-  justify-content: center;
-  padding: 20px; 
-}
-.detaljerContainer {
-  max-width: 800px; /* Maximal bredd */
-  text-align: center; /* Centrera text */
-}
-
-/* Styling for the back button */
-.backBtn {
-  display: inline-block;
-  padding: 10px 100px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: #10968b;;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px; /* Adds some space above the button */
-}
-
-.backBtn:hover {
-  background-color: #13bfb0; /* Darker shade on hover */
-}
-
-.detaljerImage {
-  border-radius: 24px;
-  box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.8);
-}
-
 /* HEMSIDAN */
 .hero-section {
   text-align:center;
@@ -233,7 +138,122 @@ footer {
   box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.8);
 }
 
-/* PRIVACY */
-.privacyContainer {
-  padding: 20px
+
+/* VÅRA ALSTER SIDAN */
+.categoryContainer, .productContainer {
+  padding: 30px;
+  text-align: center;
+}
+.categoryTitle {
+  color: white;
+  margin-bottom: 40px;
+}
+.categoryDescription p {
+  color: white;
+  margin-bottom: 40px;
+}
+.categoryGrid, .productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 55px;
+  max-width: 1664px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.categoryCard {
+  background-color: #156a4b;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  display: flex;
+  flex-direction: column; 
+}
+.categoryCard:hover {
+  transform: scale(1.06);
+  background-color: #1c835d;
+}
+.categoryName {
+  font-size: 1.4em;
+  color: #f8f9fa;
+  margin-bottom: 26px;
+  margin-top: 6px;;
+  text-decoration: none;
+}
+.categoryImage img {
+  max-width: 340px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.categoryCard a {
+  text-decoration: none;
+}
+
+/* ALSTER I KATEGORI*/
+.productCard {
+  background-color: #156a4b;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.productCard:hover {
+  transform: scale(1.06);
+  background-color: #1c835d;
+}
+.productImage {
+  max-width: 340px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.productName {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.productBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-weight: bold;
+  background-color: #10968b;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 11px;
+}
+.productBtn:hover {
+  background-color: #13bfb0;
+}
+.backBtn {
+  display: inline-block;
+  padding: 10px 100px;
+  background-color: #10968b;;
+  color: white;
+  transition: background-color 0.3s ease;
+  margin-top: 20px; 
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.backBtn:hover {
+  background-color: #13bfb0; 
+}
+
+
+/* DETALJER SIDAN */
+.detaljWrapper{
+  display: flex;
+  justify-content: center;
+  padding: 20px; 
+}
+.detaljerContainer {
+  max-width: 800px; 
+  text-align: center; 
+}
+.detaljerImage {
+  border-radius: 24px;
+  box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.8);
 }
